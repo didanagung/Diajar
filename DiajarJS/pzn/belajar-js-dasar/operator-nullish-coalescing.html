@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Nullish Coalescing</title>
+  </head>
+  <body>
+    <script>
+      // operator ini mengecek apakah suatu variabel itu undefined atau null
+      // sama pengganti if statement cuman ini memeriksa jika valuenya null atau undefined
+      let parameter = null;
+
+      // jadi artinya jika variable parameter bersifat null atau undefined maka data diubah menjadi value yang ada di sebelah kanan setelah tanda tanya 2 (??)
+      let data = parameter ?? "Nilai Default";
+
+      document.writeln(`<p>${data}</p>`);
+    </script>
+  </body>
+</html>

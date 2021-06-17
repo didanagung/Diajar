@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Array</title>
+  </head>
+  <body>
+    <script>
+      // array kosong
+      const array = [];
+      const arrayAyaan = ["Didan", "Agung", "Sergia"];
+
+      // anda bisa tambahkan data ke array melalui perintah .push() dan datanya akan berurut.
+      const nama = [];
+      nama.push("Didan");
+      nama.push("Agung", "Sergia");
+      console.table(nama);
+
+      // untuk menampilkan isi dari array tertentu
+      console.info(nama[0]);
+      console.info(nama[1]);
+
+      // untuk mengganti array anda bisa lakukan dengan cara "namaArray[arrayKasabaraha] = valuenaNaon;"
+      nama[0] = "Kilat";
+      nama[1] = "Bajra";
+      nama[2] = "Sumbawa";
+      console.table(nama);
+
+      // mun rek ngahapus array tinggal pake perintah delete ngaranArray[arrayKasabaraha];
+
+      delete nama[2];
+      console.table(nama);
+
+      // lamun maneh ek ngahapus array tuluy nambahan deui pasti bakal nyieun array anyar, moal ngaganti nu tadi dihapus.
+      nama.push("Darman");
+      console.table(nama);
+
+      // kecuali maneh nambahanna make perintah khusus nyaeta
+      nama[2] = "Meunang Ngubah";
+      console.table(nama);
+    </script>
+  </body>
+</html>

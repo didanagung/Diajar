@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Of</title>
+  </head>
+  <body>
+    <script>
+      // ini mengambil valuenya tidak peduli indexnya, biasanya digunakan dalam array atau string atau lain-lain (tentunya harus iterable)
+      const names = ["Didan", "Agung", "Sergia"];
+      for (const name of names) {
+        document.writeln(`<p>${name}</p>`);
+      }
+
+      const fullName = "Didan Agung Sergia";
+      for (const character of fullName) {
+        document.writeln(`<p>${character}</p>`);
+        // document.writeln(`${character}`);
+      }
+    </script>
+  </body>
+</html>

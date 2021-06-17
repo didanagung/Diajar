@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      // arrow function adalah bentuk sederhana dari function dan pada arrow function terdapat lumayan banyak kekurangan seperti tidak bisa mendeklarsikan function generator, tidak memiliki fitur arguments object (...args), tidak bisa mengakses this, dan tidak bisa mengakses super
+
+      //   const sayHello = (name) => {
+      //     const say = `Hello ${name}`;
+      //     console.info(say);
+      //   };
+
+      //   const sayHello = (name) => console.info(`Hai ${name}`);
+
+      //   jika di dalam parameter cuma ada satu parameter maka kurung parameter bisa dihilangkan dalam arrow function ini
+      const sayHello = (name) => console.info(`Hai ${name}`);
+
+      sayHello("Didan");
+
+      // di dalam arrow function juga bisa mengembalikan value (return) dengan satu baris
+      const sum = (first, second) => first + second;
+      console.info(sum(100, 50));
+
+      function giveMeName(callback) {
+        callback("Didan");
+      }
+
+      //   Anonymous Function atau function di dalam parameter
+      //   giveMeName(function (name) {
+      //     console.info(`Hello ${name}`);
+      //   });
+
+      // Anonymous Function di dalam Arrow Function
+      giveMeName((name) => console.info(`Hello ${name}`));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata kunci this</title>
+  </head>
+  <body>
+    <script>
+      // jika secara global maka akan muncul window meskipun thisnya di dalam function atau nested function maka hasilnya tetap sama yaitu window
+      console.log(this);
+
+      //   berbeda jikalau di dalam object yang menjadi this adalah si value yang mempresentasikan object tersebut
+      // katena this adalah syntax di mana syntak tersebut berada atau punya siapa
+
+      const person = {
+        name: "didan",
+        sayHello: function (value) {
+          //   console.info(this); //ini berada di person atau berada di sebuah value
+          console.info(`Hai ${value}, nama saya ${this.name}`); // ini untuk memanggil name yang ada di luar function
+        },
+      };
+      person.sayHello("Sergia");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      // kita bisa menambahkan valaue ke dalam parameter rest ini karena di dalam parameter rest ini bersifat array jadi kita bisa tambahkan data sebanyak banyaknya terserah anda yang mengisikan
+      // namun ada catatan yang harus anda ketahui bahwa rest parameter ini harus diposisikan di akhir parameter, tidak boleh di depan maupun di tengah, kecuali parameternya cuma ada satu dan rest parameter harus ada satu di dalam function, tidak boleh dua ataupun tiga
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        console.info(`Total ${name} is ${total}`);
+      }
+      sum("Orange", 1, 2, 3, 4, 5);
+      sum("Anggur", 6, 7, 8, 9);
+      // jika kita terlanjur mempunyai array atau variable yang berisi array dan ingin menambahkan pada parameter rest maka kita juga mengkonfersikannya dengan menggunakan ...(titik tiga kali) nah metode ini namanya SPREAD SYNTAX
+      const values = [10, 10, 10, 10, 6, 4];
+      sum("Cau", ...values);
+    </script>
+  </body>
+</html>

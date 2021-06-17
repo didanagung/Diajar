@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+
+        // bedana array jeung object nyaeta array mah indexna teu bisa diubah, jadi kur bisa make number hungkul, sementara object mah bisa sesuai keinginan tapi biasana ku string sih.
+        const orang = {
+        "nama lengkap" : "Didan Agung Sergia",
+        alamat: "Ciluluk",
+        umur: 21 
+        };
+        console.table(orang);
+
+        // mengambil data
+        console.info(`Nama : ${orang["nama lengkap"]}`); //lamun indexna jiga kieu berarti kudu make []
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+
+        // dasarna kieu bentukna
+        // orang["nama"] = "Didan Agung Sergia";
+        // orang["alamat"] = "Ciluluk";
+        // orang["umur"] = 21;
+
+        // lamun ek ngahapus
+        delete orang["alamat"];
+        console.table(orang);
+
+    </script>
+</body>
+</html>

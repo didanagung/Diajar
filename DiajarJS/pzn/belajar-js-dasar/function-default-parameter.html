@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Default Parameter</title>
+  </head>
+  <body>
+    <script>
+      // kita sudah tau bahwa di dalam JS parameternya bersifat opsional atau jika kita tidak tambahkan value kepada parameter tesebut maka parameter ini berisi undefined, nah karena itu lumayan bahaya karena tidak akan error maka di JS ada fungsi yang namanya default value yang artinya jika parameter tersebut bernilai undefined maka akan digantikan dengan default parameter tersebut
+
+      function name(firstName, middleName = "UNKNOWN") {
+        console.log(firstName);
+        console.log(middleName);
+      }
+      name();
+      name("Didan");
+      name("Didan", "Agung");
+      name("Didan", undefined);
+    </script>
+  </body>
+</html>

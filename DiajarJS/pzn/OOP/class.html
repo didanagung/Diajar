@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Class pada JS</title>
+  </head>
+  <body>
+    <script>
+      // tidak ada perintah class yang khusus pada JavaScript oleh karena itu membuat class sendiri menggunakan perintah function dan menggunakan huruf UpperCamelCase
+      function Person() {
+        //namaDepan, namaTengah) {
+        this.namaDepan; // = namaDepan;
+        this.namaTengah; //= namaTengah;
+      }
+
+      // membuat person baru
+      const didan = new Person(); //"Didan", "Sergia");
+      didan.namaDepan = "Didan";
+      didan.namaTengah = "Agung";
+      const fikri = new Person(); //"Muhammad", "Fikri");
+
+      console.log(didan);
+      console.log(fikri);
+    </script>
+  </body>
+</html>

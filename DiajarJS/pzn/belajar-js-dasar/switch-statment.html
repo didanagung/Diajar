@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Statement</title>
+  </head>
+  <body>
+    <script>
+      // ieu sarua jeung if element, ngan bedana ieumah kudu nu sarua hungkul (teu bisa leuwih dari atawa kurang dari) nah si switch ieumah mun maneh ngadeklarasikeun hiji deklarasi maka kudu diakhiri make perintah break;
+      const nilai = "D";
+      switch (nilai) {
+        case "A": {
+          document.writeln("<p>Wadaw Anda Lulus Dengan Baik!!!</p>");
+          break;
+        }
+        case "B":
+        case "C": {
+          document.writeln("<p>Anda Lulus!!!</p>");
+          break;
+        }
+        case "D": {
+          document.writeln("<p>Maaf Anda Tidak Lulus!!!</p>");
+          break;
+        }
+        default: {
+          document.writeln("<p>Wadaw Anda Mungkin Salah Jurusan Bre!!!</p>");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

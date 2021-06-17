@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      // global scope
+      let count = 0;
+
+      // global scope
+      function hitMe() {
+        // ini namanya local scope function hitMe
+        // perlu diingat bahwa local scope hanya bisa diakses didalam function ini saja, tidak bisa keluar seperti global scope
+        count++;
+      }
+
+      // global scope
+      function counter() {
+        // local scope function name
+        count++;
+      }
+
+      hitMe();
+      counter();
+      console.log(count);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <script>
+      // ini untuk mengecek apakah di dalam objek itu ada nilai atau kosong (null or undefined)
+      let person = {};
+      // jadi dibacanya jika variable person ada valueanya maka akan mencari di dalamnya, dan jika variable person tidak ada valuenya atau objeknya maka akan muncul undefined
+      //   ini berguna jika variable yang kita tuju berobjek kosong karena kalau tidak di cek maka JS tidak akan muncul apa apa dan si sitem tidak akan membaca peritah selanjutnya
+      alert(person?.address?.country);
+    </script>
+  </body>
+</html>

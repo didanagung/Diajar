@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      // untuk mengakses property yang ada di dalam suatu objek tanpa memanggil nama objeknya di ulang ulang
+
+      const person = {
+        firstName: "Didan",
+        middleName: "Agung",
+        lastName: "Sergia",
+      };
+
+      // yang asalnya begini
+      console.info(person.firstName);
+      console.info(person.middleName);
+      console.info(person.lastName);
+
+      const firstName = "Fikri";
+      const lastName = "Abdillah";
+
+      //   menjadi
+      with (person) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+      console.info(firstName);
+      console.info(lastName);
+    </script>
+  </body>
+</html>

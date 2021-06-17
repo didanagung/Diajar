@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diajar VueJs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
+    <style>
+        body {
+            margin : 5%;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .active{
+            background: rgb(226, 18, 209);
+            border: 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <header>
+        <img src="image/STMIKLogo.png" width="80">
+        <!-- selain v-text anda juga bisa menggunakan v-html untuk menambahkan elemen html -->
+        <!-- toUpperCase() untuk menjadikan string huruf kapital semua -->
+        <h1 v-text="name"></h1>
+        <p><input type="text" v-model="name"></p>
+
+        <h3>Daftar kelas {{ kelas.length }}</h3>
+        <!-- length adalah mendapatkan jumlah total dari data array -->
+        <ul v-if="kelas.length">
+            <!-- looping -->
+            <li v-for=" (k, index) of kelas"> {{ index+1 }} - {{ k }}</li>
+        </ul>
+        <li v-else>Kelas Belum Tersedia</li>
+
+        <p>{{kelas}}</p>
+                <div>
+                    <label> <input type="checkbox" value="React" v-model="kelas">React</label>
+                    <label> <input type="checkbox" value="VueJs" v-model="kelas">VueJs</label>
+                    <label> <input type="checkbox" value="Angular" v-model="kelas">Angular</label>
+                </div>
+
+                <h3>Mencari Bilangn Genap : {{ numbers }}</h3>
+                <ul>
+                    <li v-for="x in cariBilanganGenap(numbers)">{{ x }}</li>
+                </ul>
+        
+                <p>Ini Bilangan {{ infoBilangan }}</p>
+        <p>
+            <!-- @ adalah pengganti dari v-on -->
+            <button @click="hanleClick">Ditekan</button>
+        </p>
+        <!-- v-bind: untuk mencetak data yang ada di js tanpa mengubah struktur html -->
+        <img :src="gambar" width="100">
+        <p>Progres Framework Javascript</p>
+
+        <!-- ieu dihandap cara ngatur mana menu anu aktif -->
+        <a v-bind:class="{active: menu === 'home'}" href="#" @click="gantimenu('home', $event)">Home</a>
+        <a v-bind:class="{active: menu === 'tentang'}" href="#" @click="gantimenu('tentang', $event)">Tentang</a>
+        <a v-bind:class="{active: menu === 'blog'}" href="#" @click="gantimenu('blog', $event)">Blog</a>
+
+    </header>
+
+    <footer id="footer">
+        <p>copyright 2020</p>
+    </footer>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script>
+
+        const vm = new Vue({
+            //el teh hartina elemen
+            el: '#app',
+            data: {
+               //string, numer, array, object <- bisa nginput kabeh ieu dijero data
+               name: 'Didan Agung Sergia',
+               message: "Hello World!",
+               qty: 1,
+               namaDepan: "Kagawa",
+               namaBelakang: " Susanoo",
+               bilangan: 1,
+               gambar: 'image/AdminLTELogo.png',
+               menu: "",
+               kelas: [],
+               numbers: [1, 2, 3, 4, 5],
+           },
+           methods: {
+               getname: function() {
+                return 'Hello, ' +this.name
+               },
+               ubahNama: function(namaBaru){
+                   this.name = namaBaru
+                   return this.getname()
+               },
+               hanleClick: function(){
+                   this.bilangan++
+                   this.gambar = 'image/avatar5.png'
+               },
+               cariBilanganGenap: function(data){
+                return data.filter(angka => {
+                    return angka % 2 == 1
+                })
+               },
+               gantimenu: function(data, event){
+                   event.preventDefault()
+                   console.log(event)
+                this.menu = data
+               }
+            },
+            //    computed teh nilai anu bergantung kanu lain
+            computed: {
+                totalBayar: function(){
+                    return this.qty * 10000
+                },
+                namaLengkap: function(){
+                    return this.namaDepan + this.namaBelakang
+                },
+                infoBilangan: function(){
+                    return this.bilangan%2 === 0 ? 'Genap' : 'Ganjil'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

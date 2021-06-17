@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi string dan number</title>
+</head>
+<body>
+    <script>
+
+        // parseInt mngubah string menjadi number bulat atau Integer
+        // parseFloat mengubah string menjadi pecahan
+        // Number mah flexible jadi bisa pecahan atau bilangan bulat (kumaha urang inputkeunna)
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+        document.writeln(`<p> ${sum} </p>`);
+
+        // jika anda ingin mengubah data dari number menuju string maka tinggal tambahkan fungsi .toSring()
+        const a = 1;
+        const b = 2;
+        const total = a.toString() + b.toString();
+        document.writeln(`<p> ${total} </p>`);
+
+        // ada yang spesial di JS yaitu NaN (Not a Number), jadi mun alurang inputkeun function anu salah maka hasilna bakal NaN
+        document.writeln(`<p> ${parseInt("salah")} </p>`);
+        document.writeln(`<p> ${parseFloat("1.1text")} </p>`);
+        // khusus untuk function Number tidak akan mentolerir data, jadi mun aya nu salah di jero maka hasilnya akan salah
+        document.writeln(`<p> ${Number("1.1text")} </p>`);
+
+        // dan jika anda ingin mengoperasikan NaN maka hasilnya akan tetap NaN (jadi usaha anda sia sia)
+
+        // dan jika anda ingin cek apakah nilai itu hasilnya NaN maka anda bisa cek menggunakan function isNaN()
+        document.writeln(`<p> ${isNaN(sum)} </p>`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di non boolean</title>
+  </head>
+  <body>
+    <script>
+      // operator logika adalah operator && dan || (kebanyakan yang di pakai adalah ||) di JS tak hanya boolean saja yang pakai opertor logika ini bahkan non boolean pun bisa pakai
+      // jadi ini dibacanya jika ada dua value dan yang satu bersifat truthy maka data itu yang diambil dan sistem membacanya dari kiri ke kanan, jika dikiri bersifat falsy dan yang kanan truthy maka data yang kanan yang akan dipakai dan jika data keduanya bersifat falsy maka data yang kanan yang akan di pakai.
+      document.writeln("Didan" || "");
+      document.writeln("<br>");
+      document.writeln("" || "Agung");
+      //   document.writeln("<br>");
+      document.writeln("<br>");
+      document.writeln(undefined || null);
+      document.writeln("<br>");
+
+      //   kebalikan dari operator || yaitu &&, operator ini akan mengambil data pertama yang falsy dan jika dua duanya bernilai truthy maka akan mengambil yang paling terakhir
+
+      document.writeln("Didan" && false);
+      document.writeln("<br>");
+      document.writeln("Didan" && "Sergia");
+    </script>
+  </body>
+</html>

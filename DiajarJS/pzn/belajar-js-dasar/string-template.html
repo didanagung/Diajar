@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+
+        const name = "Didan Agung Sergia";
+        // ini sama dengan jika anda menambahkan dengan biasa string dengan "+" namun hal ini lebih praktis dan lebih canggih
+        const template = `Nama : ${name}`;
+
+        console.info(template);
+
+        const value = 85;
+        const template2 = `Nama : ${name}, Lulus : ${value > 75}`;
+        console.info(template2);
+
+        // multiline string (spasi ge diitung)
+        let multiLineString = `
+        Didan Agung Sergia
+        Manajemen Informatika
+        CSS, HTML, PHP
+        Laravel CodeIgniter Bootstrap
+        `;
+        document.writeln("<pre>");
+        document.writeln(multiLineString);
+        document.writeln("</pre>");
+
+
+    </script>
+</body>
+</html>

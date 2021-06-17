@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function di dalam Function</title>
+  </head>
+  <body>
+    <script>
+      // function ini biasanya digunakan di dalam function yang ingin kita eksekusi namun untuk ngebreakdownnya terlalu panjang maka lakukan function ini
+
+      function outer() {
+        function inner() {
+          console.log("Inner");
+        }
+
+        inner();
+      }
+
+      outer();
+      inner();
+      //   pelu diingat karena function sifatnya berada di suatu wilayah tersebut yang di eksekusi, jadi jika kita membuat function di dalam function maka function yang di dalam function tersebut tidak bisa kita panggil di luar dari function luar
+    </script>
+  </body>
+</html>

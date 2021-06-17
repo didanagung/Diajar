@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator In</title>
+  </head>
+  <body>
+    <!-- untuk mengecek apakah di dalam object ada index atau tidak -->
+    <script>
+      const person = {
+        name: "Didan Agung ",
+        lastName: "Sergia",
+      };
+
+      if ("firstName" in person) {
+        alert(`Hello ${person.firstName}`);
+      } else {
+        alert("Hai");
+      }
+      //   perlu diingat jika di dalam in operator jika di dalamnya ada index yang nilainya undifiend atau null, maka tetap di jadikan sebagai true karena operator in hanya mengecek apakah ada index atau tidak saja
+    </script>
+  </body>
+</html>

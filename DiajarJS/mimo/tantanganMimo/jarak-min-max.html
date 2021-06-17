@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Menentukan jarak antara nilai terbesar dengan nilai terkecil di dalam
+      array
+    </title>
+  </head>
+  <body>
+    <script>
+      function differenceMinMax(array) {
+        const max = Math.max.apply(null, array); //mencari nilai terbesar
+        const min = Math.min.apply(null, array); //mencari nilai terkecil
+        // console.log(min);
+        return max - min;
+      }
+
+      // differenceMinMax([2, 3, 4]);
+      console.log(differenceMinMax([50, 40, 10]));
+    </script>
+  </body>
+</html>

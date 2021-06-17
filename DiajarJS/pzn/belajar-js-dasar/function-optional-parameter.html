@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Optional Parameter</title>
+  </head>
+  <body>
+    <script>
+      // secara default parameter di dalam function berisi undefined, jadi kalau kita mendeklarasikan parameter di dalam function tetapi parameter tersebut tidak kita isikan, di dalam JS maka parameter tersebut bernilai undefined dan tidak akan error walaupun parameternya kelebihan
+      function name(firstName, middleName, lastName) {
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      name("Didan");
+    </script>
+  </body>
+</html>

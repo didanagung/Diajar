@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Aritmatika</title>
+</head>
+<body>
+    <script>
+        let result = 1 + 2;  //3
+        document.writeln("<p>1 + 2 = " + result + "</p>");
+        let originalResult = result; //3
+
+        // kenapa variable di bawah ini tidak pake awalan variabel seperti "let dan const"?
+        // karena di bawah ini variablenya hanya menimpa variable yang sudah di buat sebelumnya.
+        result = result - 1;
+        document.writeln("<p>" + originalResult + " - 1 = " + result +"</p>");
+        originalResult = result; //2
+
+        result = result * 2; //4
+        document.writeln("<p>" + originalResult + " x 2 = " + result +"</p>");
+
+    </script>
+</body>
+</html>

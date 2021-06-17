@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      // di dalam function generator setelah function terus menggunakan * (function*) dan untuk mendeklarasikan isinya fungsi ini menggunakan yield, function ini isinya mirip array tetapi bukan array
+
+      function* createName() {
+        yield "Didan";
+        yield "Agung";
+        yield "Sergia";
+      }
+      const names = createName();
+      //   dibawah ini adalah cara memanggil isi dari function generator, jika anda memanggilnya dengan cara seperti array maka hasilnya tidak akan keluar
+      //   console.info(names[0]);
+      for (const name of names) {
+        console.info(name);
+      }
+
+      //   menentukan bilangan ganjil dengan function generator
+
+      // lazy => adalah dimana jika data yield di eksekusi setelah datanya di proses
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Bilangan ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      // eager => dimana datanya dulu dieksekusi semuanya, baru yield dieksekusi belakangan
+      function buatGanjilArray(value) {
+        const result = [];
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Bilangan ${i}`);
+            result.push(i);
+          }
+        }
+        return result;
+      }
+      const numbers = buatGanjil(20);
+      // for (number of numbers) {
+      //   console.info(number);
+      // }
+
+      // jika anda ingin mengambil data dari function generator satu persatu anda bisa lakukan seperti ini
+      console.info(numbers.next().value);
+      console.info(numbers.next().value);
+      console.info(numbers.next().value);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body>
+    <script>
+      // kita bisa mendapatkan value dari function dengan menggunakan perintah return
+
+      function sayHello(firstName, lastName) {
+        const say = `Hello ${firstName} ${lastName}`;
+        return say;
+      }
+
+      //   sayHello("Didan", "Sergia");
+      //   jika anda hanya sampai atas ini maka data tidak akan keluar karena di dalam function itu bernilai value, jadi kita harus panggil dibawah
+      const result = sayHello("Didan", "Sergia");
+      document.writeln(`<p>${result}</p>`);
+
+      //   anda bisa saja mendeklarasikan banyak value asal yang tampil ini hanya satu value (berarti anda bisa deklarasikan di dalam pengkondisian, contohnya di dalam pengkondisian if)
+
+      function getScore(value) {
+        if (value >= 90) {
+          return "A";
+        } else if (value >= 80) {
+          return "B";
+        } else if (value >= 70) {
+          return "C";
+        } else if (value >= 60) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+      const score = getScore(95);
+      document.writeln(`<p>Nilai kamu : ${score}</p>`);
+
+      //   return juga bisa menghentikan sebuah function, jadi perintah function akan berhenti jika telah menemukan perintah return,  dan kode setelah return tidak akan di eksekusi seperti halnya perintah break
+      function isContains(array, searchValue) {
+        for (const element of array) {
+          console.log(element); //untuk melihat apa yang dieksekusinya
+          if (element === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+      const array = [1, 2, 3, 4, 5, 6, 7];
+      const search = 2;
+      const found = isContains(array, search);
+      document.writeln(`<p>${found}</p>`);
+    </script>
+  </body>
+</html>
